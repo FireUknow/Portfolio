@@ -3,18 +3,21 @@
     top: 0;
     width: 100%;
     height: var(--nav-height);
-    background-color: var(--bg-secondary);
+    background-color: transparent;
+    /* Transparent at top */
     z-index: 100;
     transition: var(--transition);
-    border-bottom: 1px solid var(--border-default);
+    border-bottom: 1px solid transparent;
+    /* No border at top */
     display: flex;
     align-items: center;
 }
 
 .navbar.scrolled {
-    /* GitHub style is consistent, but we can keep subtle shadow */
-    background-color: rgba(1, 4, 9, 0.9);
+    background-color: rgba(13, 17, 23, 0.9);
+    /* Match bg-primary with opacity */
     backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-default);
 }
 
 .nav-container {
@@ -22,10 +25,11 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 1280px;
+    max-width: 1000px;
+    /* Match Hero width */
     margin: 0 auto;
-    padding: 0 24px;
-    /* GitHub default padding */
+    padding: 0 20px;
+    /* Match Hero padding */
 }
 
 .logo {
