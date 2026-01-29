@@ -1,6 +1,6 @@
 .hero-section {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     min-height: 100vh;
     padding: 0;
@@ -12,20 +12,21 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    text-align: left;
 }
 
 .hero-shoutout {
     margin: 0 0 20px 4px;
     color: var(--accent);
     font-family: var(--font-mono);
-    font-size: var(--fz-md);
+    font-size: clamp(var(--fz-sm), 5vw, var(--fz-md));
     font-weight: 400;
 }
 
 .big-ueber {
     margin: 0;
     font-size: clamp(40px, 8vw, 80px);
-    font-weight: 600;
+    font-weight: 700;
     color: var(--text-primary);
     line-height: 1.1;
 }
@@ -33,15 +34,50 @@
 .hero-subtitle {
     margin-top: 10px;
     color: var(--text-secondary);
-    line-height: 0.9;
+    line-height: 1.1;
+}
+
+.hero-typing-wrapper {
+    margin-top: 10px;
+    height: 30px;
+    /* Prevent layout shift */
+    display: flex;
+    align-items: center;
+}
+
+.hero-typing {
+    color: var(--accent);
+    font-family: var(--font-mono);
+    font-size: var(--fz-xl);
+}
+
+.cursor {
+    color: var(--accent);
+    animation: blink 1s step-end infinite;
+    font-size: var(--fz-xl);
+    font-weight: 100;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
 }
 
 .hero-description {
     margin: 20px 0 0;
-    max-width: 500px;
+    max-width: 540px;
     font-size: var(--fz-lg);
     line-height: 1.6;
     color: var(--text-secondary);
+    word-break: keep-all;
+    /* Korean word breaking */
 }
 
 .cta-btn {
@@ -62,4 +98,10 @@
 .cta-btn:hover {
     background-color: rgba(100, 255, 218, 0.1);
     text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 0 20px;
+    }
 }
