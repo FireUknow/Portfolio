@@ -92,7 +92,7 @@ export const content = {
             modal: {
                 context: "Context",
                 tech: "Tech Stack",
-                features: "swKey Features",
+                features: "Key Features",
                 troubleshooting: "Troubleshooting",
                 links: "Links"
             }
@@ -121,53 +121,105 @@ export const skillsData = {
     ]
 };
 
-export const projectsData = [
-    {
-        id: 1,
-        title: "STM32 기반 스마트 팩토리 센서 노드",
-        category: "embedded",
-        summary: "산업용 모터의 진동 및 온도를 실시간으로 수집하는 IoT 센서 노드 개발",
-        techStack: ["STM32F4", "FreeRTOS", "MQTT", "C"],
-        context: "기존 유선 센서 시스템의 설치 및 유지보수 비용을 절감하기 위해 무선(Wi-Fi) 기반의 소형 센서 노드가 필요했습니다.",
-        keyFeatures: [
-            "FreeRTOS 기반 멀티스레딩으로 데이터 수집(ADC)과 통신(Wi-Fi) 병렬 처리",
-            "DMA를 활용한 고속 진동 데이터 샘플링 (10kHz)",
-            "저전력 모드 구현으로 배터리 수명 30% 연장"
-        ],
-        troubleshooting: "Wi-Fi 모듈 전송 시 ADC 노이즈 발생 문제: 전원 라인에 LC 필터 추가 및 PCB 레이아웃 수정(아날로그/디지털 그라운드 분리)을 통해 SNR 20dB 개선.",
-        links: { github: "#", video: "#" },
-        bgChange: false
-    },
-    {
-        id: 2,
-        title: "반도체 장비 로그 분석 자동화 툴",
-        category: "pc",
-        summary: "장비에서 발생하는 하루 10GB 이상의 로그를 파싱하여 에러 패턴을 시각화하는 PC 프로그램",
-        techStack: ["Python", "PyQt5", "Pandas", "Matplotlib"],
-        context: "엔지니어가 수동으로 엑셀을 열어 로그를 분석하는 데 하루 평균 2시간이 소요되는 비효율을 해결하고자 했습니다.",
-        keyFeatures: [
-            "Pandas 청크 처리를 이용한 대용량 로그 파일 고속 로딩",
-            "정규표현식 기반 에러 코드 자동 추출 및 히트맵 시각화",
-            "PyQt5 기반의 직관적인 사용자 인터페이스(GUI)"
-        ],
-        troubleshooting: "대용량 파일 로딩 시 UI 프리징 현상: Python의 Threading 모듈과 PyQt의 QThread/Signal-Slot 패턴을 적용하여 UI 반응성 확보.",
-        links: { github: "#" },
-        bgChange: false
-    },
-    {
-        id: 3,
-        title: "실시간 서버 리소스 모니터링 대시보드",
-        category: "web",
-        summary: "GCP 서버의 CPU/RAM 사용량을 웹에서 실시간으로 확인하는 풀스택 프로젝트",
-        techStack: ["React", "Firebase", "Python (Agent)"],
-        context: "운영 중인 서버의 상태를 외부에서도 모바일로 간편하게 확인하고 싶었습니다.",
-        keyFeatures: [
-            "Python psutil 라이브러리로 서버 상태 주기적 수집",
-            "Firebase Realtime Database를 이용한 저지연 데이터 동기화",
-            "Chart.js를 활용한 시계열 데이터 시각화"
-        ],
-        troubleshooting: "네트워크 불안정 시 데이터 유실 문제: 에이전트에 로컬 버퍼링 큐를 구현하여 재연결 시 누락된 데이터를 일괄 전송하도록 개선.",
-        links: { github: "#", external: "#" },
-        bgChange: false
-    }
-];
+export const projectsData = {
+    ko: [
+        {
+            id: 1,
+            title: "STM32 기반 스마트 팩토리 센서 노드",
+            category: "embedded",
+            summary: "산업용 모터의 진동 및 온도를 실시간으로 수집하는 IoT 센서 노드 개발",
+            techStack: ["STM32F4", "FreeRTOS", "MQTT", "C"],
+            context: "기존 유선 센서 시스템의 설치 및 유지보수 비용을 절감하기 위해 무선(Wi-Fi) 기반의 소형 센서 노드가 필요했습니다.",
+            keyFeatures: [
+                "FreeRTOS 기반 멀티스레딩으로 데이터 수집(ADC)과 통신(Wi-Fi) 병렬 처리",
+                "DMA를 활용한 고속 진동 데이터 샘플링 (10kHz)",
+                "저전력 모드 구현으로 배터리 수명 30% 연장"
+            ],
+            troubleshooting: "Wi-Fi 모듈 전송 시 ADC 노이즈 발생 문제: 전원 라인에 LC 필터 추가 및 PCB 레이아웃 수정(아날로그/디지털 그라운드 분리)을 통해 SNR 20dB 개선.",
+            links: { github: "#", video: "#" },
+            bgChange: false
+        },
+        {
+            id: 2,
+            title: "반도체 장비 로그 분석 자동화 툴",
+            category: "pc",
+            summary: "장비에서 발생하는 하루 10GB 이상의 로그를 파싱하여 에러 패턴을 시각화하는 PC 프로그램",
+            techStack: ["Python", "PyQt5", "Pandas", "Matplotlib"],
+            context: "엔지니어가 수동으로 엑셀을 열어 로그를 분석하는 데 하루 평균 2시간이 소요되는 비효율을 해결하고자 했습니다.",
+            keyFeatures: [
+                "Pandas 청크 처리를 이용한 대용량 로그 파일 고속 로딩",
+                "정규표현식 기반 에러 코드 자동 추출 및 히트맵 시각화",
+                "PyQt5 기반의 직관적인 사용자 인터페이스(GUI)"
+            ],
+            troubleshooting: "대용량 파일 로딩 시 UI 프리징 현상: Python의 Threading 모듈과 PyQt의 QThread/Signal-Slot 패턴을 적용하여 UI 반응성 확보.",
+            links: { github: "#" },
+            bgChange: false
+        },
+        {
+            id: 3,
+            title: "실시간 서버 리소스 모니터링 대시보드",
+            category: "web",
+            summary: "GCP 서버의 CPU/RAM 사용량을 웹에서 실시간으로 확인하는 풀스택 프로젝트",
+            techStack: ["React", "Firebase", "Python (Agent)"],
+            context: "운영 중인 서버의 상태를 외부에서도 모바일로 간편하게 확인하고 싶었습니다.",
+            keyFeatures: [
+                "Python psutil 라이브러리로 서버 상태 주기적 수집",
+                "Firebase Realtime Database를 이용한 저지연 데이터 동기화",
+                "Chart.js를 활용한 시계열 데이터 시각화"
+            ],
+            troubleshooting: "네트워크 불안정 시 데이터 유실 문제: 에이전트에 로컬 버퍼링 큐를 구현하여 재연결 시 누락된 데이터를 일괄 전송하도록 개선.",
+            links: { github: "#", external: "#" },
+            bgChange: false
+        }
+    ],
+    en: [
+        {
+            id: 1,
+            title: "STM32 Smart Factory Sensor Node",
+            category: "embedded",
+            summary: "IoT sensor node development for real-time vibration and temperature data collection.",
+            techStack: ["STM32F4", "FreeRTOS", "MQTT", "C"],
+            context: "Wireless (Wi-Fi) compact sensor nodes were needed to reduce installation and maintenance costs of existing wired systems.",
+            keyFeatures: [
+                "Parallel processing of data collection (ADC) and communication (Wi-Fi) using FreeRTOS multi-threading",
+                "High-speed vibration data sampling (10kHz) using DMA",
+                "Battery life extended by 30% through low-power mode implementation"
+            ],
+            troubleshooting: "ADC noise issue during Wi-Fi transmission: Improved SNR by 20dB by adding LC filters to power lines and separating analog/digital grounds in PCB layout.",
+            links: { github: "#", video: "#" },
+            bgChange: false
+        },
+        {
+            id: 2,
+            title: "Log Analysis Automation Tool",
+            category: "pc",
+            summary: "PC program parsing 10GB+ daily logs to visualize error patterns.",
+            techStack: ["Python", "PyQt5", "Pandas", "Matplotlib"],
+            context: "Addressed inefficiency where engineers spent 2 hours daily manually analyzing logs in Excel.",
+            keyFeatures: [
+                "High-speed loading of large log files using Pandas chunk processing",
+                "Regex-based automatic error code extraction and heatmap visualization",
+                "Intuitive GUI based on PyQt5"
+            ],
+            troubleshooting: "UI freezing with large files: Ensured UI responsiveness by applying Python's Threading module and PyQt's QThread/Signal-Slot pattern.",
+            links: { github: "#" },
+            bgChange: false
+        },
+        {
+            id: 3,
+            title: "Real-time Server Resource Monitoring",
+            category: "web",
+            summary: "Full-stack project to monitor GCP server CPU/RAM usage in real-time.",
+            techStack: ["React", "Firebase", "Python (Agent)"],
+            context: "Needed a way to check server status from mobile externally.",
+            keyFeatures: [
+                "Periodic collection of server status using Python psutil library",
+                "Low-latency data synchronization using Firebase Realtime Database",
+                "Time-series data visualization using Chart.js"
+            ],
+            troubleshooting: "Data loss during network instability: Improved by implementing a local buffering queue in the agent to batch send missing data upon reconnection.",
+            links: { github: "#", external: "#" },
+            bgChange: false
+        }
+    ]
+};

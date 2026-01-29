@@ -9,9 +9,11 @@ const Projects = () => {
     const [filter, setFilter] = useState('all');
     const [selectedProject, setSelectedProject] = useState(null);
 
+    const currentProjects = projectsData[language];
+
     const filteredProjects = filter === 'all'
-        ? projectsData
-        : projectsData.filter(p => p.category === filter);
+        ? currentProjects
+        : currentProjects.filter(p => p.category === filter);
 
     return (
         <section id="projects" className="projects-section">
