@@ -116,7 +116,7 @@
     transform: rotate(-45deg) translate(5px, -6px);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .nav-container {
         padding: 0 25px;
     }
