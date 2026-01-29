@@ -3,34 +3,37 @@ export const content = {
     ko: {
         navbar: {
             about: "소개",
+            skills: "기술 스택", // Moved up
             projects: "프로젝트",
-            skills: "기술 스택",
             contact: "연락처",
             resume: "이력서"
         },
         hero: {
             greeting: "안녕하세요, 저는",
-            title: "하드웨어와 소프트웨어를 잇는",
-            subtitle: "임베디드 엔지니어 송윤오입니다.",
-            description: "MCU 펌웨어 개발부터 Python 기반 데이터 처리까지, 시스템 전체를 관통하는 개발을 지향합니다.",
+            title: "Hardware to Software,\nBridge the Gap.",
+            subtitle: "회로 설계부터 펌웨어 제어, 응용 소프트웨어까지.\n시스템의 빈틈을 메우는 엔지니어 송윤오입니다.",
+            description: "MCU 펌웨어 최적화부터 Python 기반 데이터 파이프라인 구축까지, 하드웨어와 소프트웨어의 경계를 허무는 통합 솔루션을 설계합니다.",
             cta: "프로젝트 보기",
-            badges: ["STM32", "Python", "Firmware", "HW Design"]
+            badges: ["Circuit Design", "Firmware Intergration", "System Architecture"]
         },
         about: {
-            title: "소개",
+            title: "엔지니어링 철학",
             description: [
-                "저는 하드웨어 제어 능력과 소프트웨어 데이터 처리 역량을 겸비한 T자형 인재입니다.",
-                "단순히 기능만 동작하는 펌웨어가 아니라, Python 및 클라우드(GCP)와 연동하여 데이터 가치를 극대화하는 시스템을 구축합니다.",
-                "기계공학 베이스의 탄탄한 물리적 이해도를 바탕으로, 실제 세계의 문제를 해결하는 솔루션을 만듭니다."
+                "저는 '기구'를 만드는 사람이 아니라, 시스템의 '신경망(H/W)'과 '뇌(F/W)'를 설계하는 사람입니다.",
+                "하드웨어의 물리적 한계를 소프트웨어로 극복하고, 소프트웨어의 부하를 하드웨어로 분산시키는 최적화 경험을 보유하고 있습니다.",
+                "단순 작동을 넘어, 시스템 전체의 안정성과 확장성을 고려한 설계를 지향합니다."
             ]
         },
         skills: {
-            title: "기술 스택",
-            expert: "Expert (매일 사용하며 깊이 있는 이해)",
-            proficient: "Proficient (프로젝트 수행 가능)"
+            title: "기술 스택 (Tech Stack)",
+            layers: {
+                sw: "Layer 1. Application S/W (Data & Logic)",
+                fw: "Layer 2. Control F/W (System Brain)",
+                hw: "Layer 3. Hardware H/W (Physical Layer)"
+            }
         },
         projects: {
-            title: "프로젝트",
+            title: "프로젝트 (Projects)",
             filter: {
                 all: "전체",
                 embedded: "Embedded System",
@@ -38,48 +41,51 @@ export const content = {
                 web: "Web & Automation"
             },
             modal: {
-                context: "배경 및 목적",
-                tech: "사용 기술",
-                features: "주요 기능",
-                troubleshooting: "문제 해결 (Troubleshooting)",
-                links: "관련 링크"
+                context: "Context & Problem",
+                tech: "Technical Specifications",
+                features: "Key Features",
+                troubleshooting: "Critical Troubleshooting (Engineering Log)",
+                links: "Links"
             }
         },
         contact: {
             title: "연락하기",
-            subtitle: "함께 성장할 기회를 기다립니다.",
-            description: "임베디드 시스템 개발, 펌웨어 최적화, 또는 자동화 솔루션과 관련하여 궁금한 점이 있으시다면 언제든 연락 주세요.",
+            subtitle: "시스템 개발 및 통합 관련 문의",
+            description: "회로 설계, 펌웨어 최적화, 혹은 전체 시스템 아키텍처에 대한 논의가 필요하시다면 언제든 연락 주세요.",
             btn: "메일 보내기"
         }
     },
     en: {
         navbar: {
             about: "About",
+            skills: "Tech Stack", // Moved up
             projects: "Projects",
-            skills: "Skills",
             contact: "Contact",
             resume: "Resume"
         },
         hero: {
             greeting: "Hello, I am",
-            title: "Bridging Hardware & Software",
-            subtitle: "Embedded Engineer, Uknow Song.",
-            description: "Focusing on full-system development from MCU firmware to Python-based data processing.",
+            title: "Hardware to Software,\nBridge the Gap.",
+            subtitle: "Bridging the gap between Circuit Design,\nFirmware Control, and Application Software.",
+            description: "I am a System Engineer who designs the neural network (Circuit), the brain (Firmware), and the interface (Software).",
             cta: "View Projects",
-            badges: ["STM32", "Python", "Firmware", "HW Design"]
+            badges: ["Circuit Design", "Firmware Intergration", "System Architecture"]
         },
         about: {
-            title: "About Me",
+            title: "Engineering Philosophy",
             description: [
-                "I am a T-shaped engineer combining hardware control skills with software data processing capabilities.",
-                "I build systems that maximize data value by integrating firmware with Python and Cloud (GCP), rather than just making it work.",
-                "Based on a strong physical understanding from Mechanical Engineering, I create solutions that solve real-world problems."
+                "I do not just 'make things'; I design the system's neural network (H/W) and brain (F/W).",
+                "I specialize in full-system optimization—overcoming physical hardware limitations with software and offloading software loads to hardware.",
+                "Beyond mere functionality, I design for stability, scalability, and integration."
             ]
         },
         skills: {
-            title: "Skills",
-            expert: "Expert",
-            proficient: "Proficient"
+            title: "Tech Stack",
+            layers: {
+                sw: "Layer 1. Application S/W (Data & Logic)",
+                fw: "Layer 2. Control F/W (System Brain)",
+                hw: "Layer 3. Hardware H/W (Physical Layer)"
+            }
         },
         projects: {
             title: "Projects",
@@ -90,86 +96,136 @@ export const content = {
                 web: "Web & Automation"
             },
             modal: {
-                context: "Context",
-                tech: "Tech Stack",
+                context: "Context & Problem",
+                tech: "Technical Specifications",
                 features: "Key Features",
-                troubleshooting: "Troubleshooting",
+                troubleshooting: "Critical Troubleshooting (Engineering Log)",
                 links: "Links"
             }
         },
         contact: {
             title: "Contact",
             subtitle: "Let's connect.",
-            description: "Feel free to reach out regarding embedded systems, firmware optimization, or automation solutions.",
+            description: "Feel free to reach out regarding Circuit Design, Firmware Optimization, or System Architecture.",
             btn: "Send Email"
         }
     }
 };
 
+// 3-Layer Tech Stack Structure
 export const skillsData = {
-    expert: [
-        { name: "C / C++", icon: "devicon-c-plain" },
-        { name: "Python", icon: "devicon-python-plain" },
-        { name: "STM32 (HAL/LL)", icon: "devicon-embedded-plain" },
-        { name: "UART / I2C / SPI", icon: "fas fa-microchip" } // FontAwesome fallback
-    ],
-    proficient: [
-        { name: "Git & GitHub", icon: "devicon-git-plain" },
-        { name: "Ubuntu / Linux", icon: "devicon-linux-plain" },
-        { name: "GCP / Firebase", icon: "devicon-googlecloud-plain" },
-        { name: "React (Basic)", icon: "devicon-react-plain" }
-    ]
+    sw: {
+        title: "Application S/W",
+        desc: "Data Visualization & Automation Interface",
+        skills: [
+            { name: "Python", icon: "devicon-python-plain" },
+            { name: "PyQt5", icon: "fas fa-desktop" }, // FontAwesome
+            { name: "Linux (Ubuntu)", icon: "devicon-linux-plain" },
+            { name: "GCP / Firebase", icon: "devicon-googlecloud-plain" }
+        ]
+    },
+    fw: {
+        title: "Control F/W",
+        desc: "Real-time Control & data processing",
+        skills: [
+            { name: "C / C++", icon: "devicon-c-plain" },
+            { name: "STM32 (HAL/LL)", icon: "devicon-embedded-plain" },
+            { name: "FreeRTOS", icon: "fas fa-network-wired" },
+            { name: "Embedded C", icon: "devicon-c-plain" }
+        ]
+    },
+    hw: {
+        title: "Hardware H/W",
+        desc: "Circuit Design & Physical Signal Conditioning",
+        skills: [
+            { name: "Circuit Design", icon: "fas fa-microchip" },
+            { name: "PCB Layout", icon: "fas fa-layer-group" },
+            { name: "KiCAD / Altium", icon: "fas fa-drafting-compass" },
+            { name: "Oscilloscope", icon: "fas fa-wave-square" }
+        ]
+    }
 };
 
+// Enhanced Project Data with Tech Specs & Deep Troubleshooting
 export const projectsData = {
     ko: [
         {
             id: 1,
             title: "STM32 기반 스마트 팩토리 센서 노드",
             category: "embedded",
-            summary: "산업용 모터의 진동 및 온도를 실시간으로 수집하는 IoT 센서 노드 개발",
+            summary: "산업용 모터 진동/온도 실시간 수집 IoT 노드 (High-speed Sampling)",
             techStack: ["STM32F4", "FreeRTOS", "MQTT", "C"],
-            context: "기존 유선 센서 시스템의 설치 및 유지보수 비용을 절감하기 위해 무선(Wi-Fi) 기반의 소형 센서 노드가 필요했습니다.",
-            keyFeatures: [
-                "FreeRTOS 기반 멀티스레딩으로 데이터 수집(ADC)과 통신(Wi-Fi) 병렬 처리",
-                "DMA를 활용한 고속 진동 데이터 샘플링 (10kHz)",
-                "저전력 모드 구현으로 배터리 수명 30% 연장"
+            techSpec: [
+                "MCU: STM32F429 (ARM Cortex-M4)",
+                "OS: FreeRTOS v10.4",
+                "Comm: Wi-Fi (ESP8266 AT Cmd), MQTT",
+                "Signal: 10kHz Sampling via DMA"
             ],
-            troubleshooting: "Wi-Fi 모듈 전송 시 ADC 노이즈 발생 문제: 전원 라인에 LC 필터 추가 및 PCB 레이아웃 수정(아날로그/디지털 그라운드 분리)을 통해 SNR 20dB 개선.",
+            context: "기존 유선 센서는 설치 비용이 높고 유지보수가 어려웠습니다. 이를 해결하기 위해 배터리로 구동되면서도 10kHz 고속 샘플링이 가능한 소형 무선 센서 노드가 필요했습니다.",
+            keyFeatures: [
+                "ADC-DMA 연동을 통한 CPU 부하 없는 10kHz 고속 진동 데이터 샘플링",
+                "FreeRTOS 멀티스레딩: 데이터 수집 태스크(Real-time)와 통신 태스크(Lazy) 분리",
+                "저전력 설계: 측정 주기가 아닐 때 Stop Mode 진입 (배터리 수명 30% 증가)"
+            ],
+            troubleshooting: {
+                problem: "Wi-Fi 데이터 전송 시 순간적인 전류 소모로 인해 ADC 참조 전압이 흔들리며 센서 값에 노이즈(Ripple)가 혼입됨.",
+                process: "오실로스코프로 3.3V 전원 라인을 분석하여 300mVp-p 리플 확인. 단순 SW 필터링으로는 왜곡된 신호를 복구할 수 없다고 판단.",
+                solution: "전원부 LC 필터 추가 및 아날로그/디지털 그라운드(AGND/DGND)를 페라이트 비즈로 분리하여 SNR 20dB 개선. 하드웨어의 문제를 정공법으로 해결함."
+            },
             links: { github: "#", video: "#" },
-            bgChange: false
+            blockDiagram: "https://via.placeholder.com/800x400?text=System+Block+Diagram" // Placeholder
         },
         {
             id: 2,
             title: "반도체 장비 로그 분석 자동화 툴",
             category: "pc",
-            summary: "장비에서 발생하는 하루 10GB 이상의 로그를 파싱하여 에러 패턴을 시각화하는 PC 프로그램",
+            summary: "10GB+ 대용량 로그 파싱 및 에러 패턴 히트맵 시각화 툴",
             techStack: ["Python", "PyQt5", "Pandas", "Matplotlib"],
-            context: "엔지니어가 수동으로 엑셀을 열어 로그를 분석하는 데 하루 평균 2시간이 소요되는 비효율을 해결하고자 했습니다.",
-            keyFeatures: [
-                "Pandas 청크 처리를 이용한 대용량 로그 파일 고속 로딩",
-                "정규표현식 기반 에러 코드 자동 추출 및 히트맵 시각화",
-                "PyQt5 기반의 직관적인 사용자 인터페이스(GUI)"
+            techSpec: [
+                "Language: Python 3.9",
+                "UI Framework: PyQt5",
+                "Data Engine: Pandas, NumPy",
+                "OS: Windows 10/11"
             ],
-            troubleshooting: "대용량 파일 로딩 시 UI 프리징 현상: Python의 Threading 모듈과 PyQt의 QThread/Signal-Slot 패턴을 적용하여 UI 반응성 확보.",
+            context: "엔지니어들이 텍스트로 된 기가바이트 단위의 로그를 엑셀로 열다가 다운되는 일이 빈번했습니다. 이를 시각화하여 직관적으로 에러 패턴을 찾아야 했습니다.",
+            keyFeatures: [
+                "Pandas Chunking 기법으로 10GB 파일을 메모리 오버플로우 없이 로딩",
+                "정규표현식(Regex)을 컴파일하여 파싱 속도 500% 향상",
+                "PyQt5 QThread를 활용하여 UI 프리징(응답 없음) 방지"
+            ],
+            troubleshooting: {
+                problem: "대용량 CSV 로딩 시 메인 UI 스레드가 멈춰 사용자 경험(UX)이 극도로 저하됨 (Not Responding 발생).",
+                process: "Python의 GIL(Global Interpreter Lock)로 인해 단순 스레딩만으로는 CPU 바운드 작업(파싱) 시 UI가 버벅임 확인.",
+                solution: "QThread와 Signal-Slot 메커니즘을 적용하여 파싱 로직을 워커 스레드로 완전히 분리하고, 진행률(Progress Bar)만 메인 스레드로 통신하도록 아키텍처 재설계."
+            },
             links: { github: "#" },
-            bgChange: false
+            blockDiagram: "https://via.placeholder.com/800x400?text=S/W+Flowchart"
         },
         {
             id: 3,
             title: "실시간 서버 리소스 모니터링 대시보드",
             category: "web",
-            summary: "GCP 서버의 CPU/RAM 사용량을 웹에서 실시간으로 확인하는 풀스택 프로젝트",
+            summary: "GCP 서버 상태 실시간 모니터링 풀스택 (Agent + Web)",
             techStack: ["React", "Firebase", "Python (Agent)"],
-            context: "운영 중인 서버의 상태를 외부에서도 모바일로 간편하게 확인하고 싶었습니다.",
-            keyFeatures: [
-                "Python psutil 라이브러리로 서버 상태 주기적 수집",
-                "Firebase Realtime Database를 이용한 저지연 데이터 동기화",
-                "Chart.js를 활용한 시계열 데이터 시각화"
+            techSpec: [
+                "Frontend: React, Chart.js",
+                "Backend: Firebase Realtime DB",
+                "Agent: Python (psutil)",
+                "Host: GCP Compute Engine"
             ],
-            troubleshooting: "네트워크 불안정 시 데이터 유실 문제: 에이전트에 로컬 버퍼링 큐를 구현하여 재연결 시 누락된 데이터를 일괄 전송하도록 개선.",
+            context: "외부 미팅 중에도 서버(장비)의 상태를 모바일로 확인하고 싶었습니다. 기존 상용 솔루션은 비싸고 무거워서 직접 경량화된 솔루션을 구축했습니다.",
+            keyFeatures: [
+                "Python 데몬(Agent)이 Linux System Call을 통해 CPU/RAM 사용량 수집",
+                "Firebase SDK를 통한 웹소켓 기반 실시간 데이터 동기화 (Latency < 100ms)",
+                "반응형 웹 대시보드로 모바일/PC 어디서든 확인 가능"
+            ],
+            troubleshooting: {
+                problem: "네트워크가 일시적으로 끊겼을 때, 그 사이의 데이터가 유실되어 그래프가 끊기는 현상 발생.",
+                process: "TCP 연결이 끊어지면 데이터 전송 실패 예외가 발생하고 데이터가 버려짐을 확인.",
+                solution: "Agent 내부에 Deque(양방향 큐) 기반의 로컬 버퍼를 구현. 네트워크 단절 시 데이터를 로컬에 쌓아두고, 재연결 시 타임스탬프와 함께 일괄 전송(Batch Upload)하여 데이터 정합성 확보."
+            },
             links: { github: "#", external: "#" },
-            bgChange: false
+            blockDiagram: "https://via.placeholder.com/800x400?text=Network+Architecture"
         }
     ],
     en: [
@@ -177,49 +233,79 @@ export const projectsData = {
             id: 1,
             title: "STM32 Smart Factory Sensor Node",
             category: "embedded",
-            summary: "IoT sensor node development for real-time vibration and temperature data collection.",
+            summary: "Real-time Industrial IoT Sensor Node (High-speed Sampling)",
             techStack: ["STM32F4", "FreeRTOS", "MQTT", "C"],
-            context: "Wireless (Wi-Fi) compact sensor nodes were needed to reduce installation and maintenance costs of existing wired systems.",
-            keyFeatures: [
-                "Parallel processing of data collection (ADC) and communication (Wi-Fi) using FreeRTOS multi-threading",
-                "High-speed vibration data sampling (10kHz) using DMA",
-                "Battery life extended by 30% through low-power mode implementation"
+            techSpec: [
+                "MCU: STM32F429 (ARM Cortex-M4)",
+                "OS: FreeRTOS v10.4",
+                "Comm: Wi-Fi (ESP8266 AT Cmd), MQTT",
+                "Signal: 10kHz Sampling via DMA"
             ],
-            troubleshooting: "ADC noise issue during Wi-Fi transmission: Improved SNR by 20dB by adding LC filters to power lines and separating analog/digital grounds in PCB layout.",
+            context: "Existing wired sensors were costly and hard to maintain. We needed a compact wireless node capable of 10kHz sampling on battery power.",
+            keyFeatures: [
+                "10kHz vibration data sampling via ADC-DMA without Mobile CPU load",
+                "FreeRTOS Multithreading: Separted Data Acquisition (Real-time) and Comm (Lazy) tasks",
+                "Low Power Design: Stop Mode entry during idle (Battery life +30%)"
+            ],
+            troubleshooting: {
+                problem: "Wi-Fi transmission caused current spikes, destabilizing ADC reference voltage and introducing noise (Ripple).",
+                process: "Analyzed 3.3V power line with oscilloscope, finding 300mVp-p ripple. Software filtering was insufficient for distorted signals.",
+                solution: "Added LC filters to power lines and separated Analog/Digital grounds (AGND/DGND) with ferrite beads, improving SNR by 20dB."
+            },
             links: { github: "#", video: "#" },
-            bgChange: false
+            blockDiagram: "https://via.placeholder.com/800x400?text=System+Block+Diagram"
         },
         {
             id: 2,
             title: "Log Analysis Automation Tool",
             category: "pc",
-            summary: "PC program parsing 10GB+ daily logs to visualize error patterns.",
+            summary: "10GB+ Log Parsing & Error Pattern Visualization Tool",
             techStack: ["Python", "PyQt5", "Pandas", "Matplotlib"],
-            context: "Addressed inefficiency where engineers spent 2 hours daily manually analyzing logs in Excel.",
-            keyFeatures: [
-                "High-speed loading of large log files using Pandas chunk processing",
-                "Regex-based automatic error code extraction and heatmap visualization",
-                "Intuitive GUI based on PyQt5"
+            techSpec: [
+                "Language: Python 3.9",
+                "UI Framework: PyQt5",
+                "Data Engine: Pandas, NumPy",
+                "OS: Windows 10/11"
             ],
-            troubleshooting: "UI freezing with large files: Ensured UI responsiveness by applying Python's Threading module and PyQt's QThread/Signal-Slot pattern.",
+            context: "Engineers frequently crashed Excel trying to open GB-sized text logs. A visualization tool was needed to intuitively find error patterns.",
+            keyFeatures: [
+                "Pandas Chunking to load 10GB files without memory overflow",
+                "Regex compilation improved parsing speed by 500%",
+                "Prevented UI freezing using PyQt5 QThread"
+            ],
+            troubleshooting: {
+                problem: "Main UI thread froze during large CSV loading, degrading UX (Not Responding).",
+                process: "Confirmed that Python's GIL caused UI lag during CPU-bound tasks (parsing) even with simple threading.",
+                solution: "Redesigned architecture using QThread and Signal-Slot mechanism to isolate parsing logic into a worker thread, communicating only progress updates to the main thread."
+            },
             links: { github: "#" },
-            bgChange: false
+            blockDiagram: "https://via.placeholder.com/800x400?text=S/W+Flowchart"
         },
         {
             id: 3,
             title: "Real-time Server Resource Monitoring",
             category: "web",
-            summary: "Full-stack project to monitor GCP server CPU/RAM usage in real-time.",
+            summary: "Full-stack Real-time Monitoring (Agent + Web)",
             techStack: ["React", "Firebase", "Python (Agent)"],
-            context: "Needed a way to check server status from mobile externally.",
-            keyFeatures: [
-                "Periodic collection of server status using Python psutil library",
-                "Low-latency data synchronization using Firebase Realtime Database",
-                "Time-series data visualization using Chart.js"
+            techSpec: [
+                "Frontend: React, Chart.js",
+                "Backend: Firebase Realtime DB",
+                "Agent: Python (psutil)",
+                "Host: GCP Compute Engine"
             ],
-            troubleshooting: "Data loss during network instability: Improved by implementing a local buffering queue in the agent to batch send missing data upon reconnection.",
+            context: "Needed to check server status from mobile externally. Commercial solutions were too heavy/expensive.",
+            keyFeatures: [
+                "Python Daemon (Agent) collects CPU/RAM usage via Linux System Calls",
+                "Real-time data sync via Firebase SDK (Latency < 100ms)",
+                "Responsive Web Dashboard for mobile/PC access"
+            ],
+            troubleshooting: {
+                problem: "Data loss occurred during temporary network outages, causing gaps in graphs.",
+                process: "Confirmed data was discarded upon TCP transmission failure.",
+                solution: "Implemented a Deque-based local buffer in the Agent. Data is stored locally during outages and batch-uploaded with timestamps upon reconnection, ensuring data integrity."
+            },
             links: { github: "#", external: "#" },
-            bgChange: false
+            blockDiagram: "https://via.placeholder.com/800x400?text=Network+Architecture"
         }
     ]
 };

@@ -44,11 +44,19 @@
     transition: var(--transition);
     height: 100%;
     border: 1px solid var(--border-default);
+    display: flex;
+    flex-direction: column;
 }
 
 .project-card:hover {
     transform: translateY(-5px);
     border-color: var(--accent);
+}
+
+.project-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .project-top {
@@ -75,6 +83,7 @@
     color: var(--text-primary);
     font-size: var(--fz-xl);
     font-family: var(--font-heading);
+    line-height: 1.3;
 }
 
 .project-description {
@@ -82,6 +91,8 @@
     font-size: 17px;
     line-height: 1.5;
     margin-bottom: 20px;
+    flex-grow: 1;
+    /* Pushes tech list down */
 }
 
 .project-tech-list {
@@ -118,7 +129,8 @@
 .modal-content {
     background-color: var(--bg-secondary);
     width: 100%;
-    max-width: 700px;
+    max-width: 800px;
+    /* Increased size */
     max-height: 90vh;
     overflow-y: auto;
     border-radius: 8px;
@@ -145,9 +157,10 @@
 }
 
 .modal-title {
-    font-size: var(--fz-heading);
+    font-size: clamp(24px, 5vw, 32px);
     color: var(--text-primary);
     margin-bottom: 15px;
+    font-family: var(--font-heading);
 }
 
 .modal-badges {
@@ -167,6 +180,46 @@
     font-family: var(--font-mono);
 }
 
+/* Block Diagram */
+.block-diagram-section {
+    text-align: center;
+    margin-bottom: 30px;
+    background-color: var(--bg-primary);
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid var(--border-muted);
+}
+
+.block-diagram-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    max-height: 300px;
+    object-fit: contain;
+}
+
+.caption {
+    font-size: var(--fz-xs);
+    color: var(--text-secondary);
+    margin-top: 5px;
+    font-style: italic;
+}
+
+/* Two Column Layout for Context & Tech */
+.modal-grid-2col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+    .modal-grid-2col {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
 .modal-section {
     margin-bottom: 30px;
 }
@@ -174,9 +227,10 @@
 .modal-section h4 {
     color: var(--accent);
     font-size: var(--fz-lg);
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     border-left: 3px solid var(--accent);
     padding-left: 10px;
+    font-family: var(--font-heading);
 }
 
 .modal-section p,
@@ -186,23 +240,72 @@
     line-height: 1.6;
 }
 
-.modal-section ul {
+.tech-spec-list,
+.feature-list {
     padding-left: 20px;
+    margin: 0;
 }
 
-.troubleshooting {
-    background-color: rgba(255, 0, 0, 0.05);
-    /* Very subtle red tint */
+.tech-spec-list li {
+    font-family: var(--font-mono);
+    font-size: var(--fz-sm);
+    margin-bottom: 5px;
+    color: var(--text-primary);
+}
+
+/* Troubleshooting Log - Engineering Style */
+.troubleshooting-log {
+    background-color: #1a1a1a;
+    /* Very dark terminal-like bg for both themes if possible, or use var */
+    background-color: var(--bg-tertiary);
+    border: 1px solid var(--border-muted);
+    border-radius: 8px;
     padding: 20px;
-    border-radius: 6px;
-    border-left: 4px solid #ff4d4f;
 }
 
-.troubleshooting h4 {
-    border: none;
-    padding: 0;
+.log-entry {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.log-row {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.log-label {
+    font-size: var(--fz-xs);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: var(--font-mono);
+    padding: 2px 8px;
+    border-radius: 4px;
+    width: fit-content;
+}
+
+.log-label.error {
+    background-color: rgba(255, 77, 79, 0.2);
     color: #ff4d4f;
-    /* Red for emphasis */
+}
+
+.log-label.process {
+    background-color: rgba(250, 173, 20, 0.2);
+    color: #faad14;
+}
+
+.log-label.solution {
+    background-color: rgba(82, 196, 26, 0.2);
+    color: #52c41a;
+}
+
+.modal-footer {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-muted);
 }
 
 .modal-link {
@@ -213,7 +316,6 @@
     color: var(--accent);
     border-radius: 4px;
     text-decoration: none;
-    margin-right: 15px;
     font-family: var(--font-mono);
     font-size: var(--fz-sm);
     transition: var(--transition);

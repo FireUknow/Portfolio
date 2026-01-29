@@ -41,7 +41,6 @@ const Projects = () => {
                                     <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-folder"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
                                 </div>
                                 <div className="project-links-icon">
-                                    {/* External Link Icon */}
                                     <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
                                 </div>
                             </div>
@@ -68,6 +67,8 @@ const Projects = () => {
                         <button className="modal-close" onClick={() => setSelectedProject(null)}>&times;</button>
 
                         <h3 className="modal-title">{selectedProject.title}</h3>
+
+                        {/* 1. Tech Specs (Badges) */}
                         <div className="modal-badges">
                             {selectedProject.techStack.map((tech, i) => (
                                 <span key={i} className="modal-badge">{tech}</span>
@@ -75,32 +76,76 @@ const Projects = () => {
                         </div>
 
                         <div className="modal-body">
-                            <div className="modal-section">
-                                <h4>{t.modal.context}</h4>
-                                <p>{selectedProject.context}</p>
+
+                            {/* 2. Block Diagram (Placeholder or Image) */}
+                            {selectedProject.blockDiagram && (
+                                <div className="modal-section block-diagram-section">
+                                    <img
+                                        src={selectedProject.blockDiagram}
+                                        alt="System Block Diagram"
+                                        className="block-diagram-img"
+                                        onError={(e) => { e.target.style.display = 'none' }}
+                                    />
+                                    <p className="caption">System Architecture / Flowchart</p>
+                                </div>
+                            )}
+
+                            {/* 3. Context & Tech Specs */}
+                            <div className="modal-grid-2col">
+                                <div className="modal-section">
+                                    <h4>{t.modal.context}</h4>
+                                    <p>{selectedProject.context}</p>
+                                </div>
+                                <div className="modal-section">
+                                    <h4>{t.modal.tech}</h4>
+                                    <ul className="tech-spec-list">
+                                        {selectedProject.techSpec && selectedProject.techSpec.map((spec, i) => (
+                                            <li key={i}>{spec}</li>
+                                        ))}
+                                    </ul>
+                                </div>
                             </div>
+
+                            {/* 4. Key Features */}
                             <div className="modal-section">
                                 <h4>{t.modal.features}</h4>
-                                <ul>
+                                <ul className="feature-list">
                                     {selectedProject.keyFeatures.map((feat, i) => (
                                         <li key={i}>{feat}</li>
                                     ))}
                                 </ul>
                             </div>
-                            <div className="modal-section troubleshooting">
-                                <h4>{t.modal.troubleshooting}</h4>
-                                <p>{selectedProject.troubleshooting}</p>
-                            </div>
+
+                            {/* 5. Create Troubleshooting (Engineering Log) */}
+                            {selectedProject.troubleshooting && (
+                                <div className="modal-section troubleshooting-log">
+                                    <h4>{t.modal.troubleshooting}</h4>
+                                    <div className="log-entry">
+                                        <div className="log-row">
+                                            <span className="log-label error">Problem</span>
+                                            <p>{selectedProject.troubleshooting.problem}</p>
+                                        </div>
+                                        <div className="log-row">
+                                            <span className="log-label process">Analysis</span>
+                                            <p>{selectedProject.troubleshooting.process}</p>
+                                        </div>
+                                        <div className="log-row">
+                                            <span className="log-label solution">Solution</span>
+                                            <p>{selectedProject.troubleshooting.solution}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            )}
                         </div>
 
                         <div className="modal-footer">
                             {selectedProject.links.github && <a href={selectedProject.links.github} target="_blank" rel="noopener noreferrer" className="modal-link">GitHub</a>}
-                            {selectedProject.links.video && <a href={selectedProject.links.video} target="_blank" rel="noopener noreferrer" className="modal-link">Video</a>}
+                            {selectedProject.links.video && <a href={selectedProject.links.video} target="_blank" rel="noopener noreferrer" className="modal-link">Video / Demo</a>}
+                            {selectedProject.links.external && <a href={selectedProject.links.external} target="_blank" rel="noopener noreferrer" className="modal-link">External Link</a>}
                         </div>
                     </div>
                 </div>
             )}
-
         </section>
     );
 };
