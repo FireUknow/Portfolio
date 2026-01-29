@@ -13,18 +13,24 @@
 .project-card {
     position: relative;
     background-color: var(--bg-secondary);
+    /* Updated variable usage check */
     padding: 2rem 1.75rem;
-    border-radius: 4px;
+    border-radius: 8px;
+    /* Slightly more rounded */
     transition: var(--transition);
     cursor: default;
     height: 100%;
     display: flex;
     flex-direction: column;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    /* Slight border for definition */
 }
 
 .project-card:hover {
     transform: translateY(-7px);
-    box-shadow: 0 10px 30px -15px var(--shadow-md);
+    box-shadow: var(--shadow-md);
+    border-top: 1px solid var(--accent);
+    /* Top border accent on hover */
 }
 
 .project-content {
@@ -44,6 +50,7 @@
     margin: 0 0 10px;
     color: var(--text-primary);
     font-size: var(--fz-xxl);
+    font-weight: 700;
 }
 
 .project-title a {
@@ -69,8 +76,8 @@
 
 .project-description {
     color: var(--text-secondary);
-    font-size: 17px;
-    line-height: 1.5;
+    font-size: 16px;
+    line-height: 1.6;
     margin-bottom: 20px;
     flex-grow: 1;
 }
@@ -78,9 +85,9 @@
 .project-tech-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 12px;
     padding: 0;
-    margin: 0 0 20px 0;
+    margin: 0 0 25px 0;
     list-style: none;
 }
 
@@ -88,21 +95,26 @@
     font-family: var(--font-mono);
     font-size: var(--fz-xs);
     color: var(--text-secondary);
-    line-height: 1.75;
+    background-color: rgba(56, 189, 248, 0.1);
+    /* Subtle badge background using accent */
+    padding: 4px 8px;
+    border-radius: 4px;
 }
 
 .project-links {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 20px;
 }
 
 .project-links a {
-    color: var(--text-secondary);
+    color: var(--text-primary);
     font-family: var(--font-mono);
     font-size: var(--fz-sm);
     z-index: 1;
-    /* Above the card link overlay */
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
 .project-links a:hover {

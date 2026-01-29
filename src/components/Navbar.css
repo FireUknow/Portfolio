@@ -3,15 +3,18 @@
     top: 0;
     width: 100%;
     height: var(--nav-height);
-    background-color: rgba(10, 25, 47, 0.85);
-    backdrop-filter: blur(10px);
+    background-color: rgba(15, 23, 42, 0.9);
+    /* More opaque for visibility */
+    backdrop-filter: blur(12px);
     z-index: 100;
     transition: var(--transition);
-    box-shadow: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    /* Subtle border */
 }
 
 .navbar.scrolled {
     height: 70px;
+    background-color: rgba(15, 23, 42, 0.95);
     box-shadow: var(--shadow-sm);
 }
 
@@ -30,10 +33,13 @@
     font-size: var(--fz-xl);
     font-weight: 700;
     text-decoration: none;
-    border: 1px solid var(--accent);
-    padding: 5px 12px;
-    border-radius: 4px;
-    z-index: 101;
+    padding: 5px;
+    /* Removed border for cleaner look, added hover glow */
+    transition: var(--transition);
+}
+
+.logo:hover {
+    text-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
 }
 
 .nav-links {
@@ -48,19 +54,34 @@
 .nav-links a {
     color: var(--text-primary);
     font-family: var(--font-mono);
-    /* Keep number mono, but text will inherit styles via span if needed, but here a is flex */
     font-size: var(--fz-xs);
     display: flex;
     align-items: center;
+    font-weight: 500;
+    padding: 10px;
 }
 
 .nav-links a:hover {
     color: var(--accent);
+    transform: translateY(-2px);
 }
 
 .nav-number {
     color: var(--accent);
     margin-right: 5px;
+}
+
+/* Resume Button Style */
+.resume-btn button {
+    background-color: transparent;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+.resume-btn button:hover {
+    background-color: rgba(56, 189, 248, 0.1);
 }
 
 .menu-icon {

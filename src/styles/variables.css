@@ -1,28 +1,34 @@
 :root {
-    /* Colors */
-    --bg-primary: #0a192f;
-    --bg-secondary: #112240;
-    --bg-tertiary: #233554;
+    /* Colors - Premium Slate Theme */
+    --bg-primary: #0f172a;
+    /* Very dark slate */
+    --bg-secondary: #1e293b;
+    /* Build items background */
+    --bg-tertiary: #334155;
+    /* Hover/Card accents */
 
-    --text-primary: #ccd6f6;
-    --text-secondary: #8892b0;
-    --accent: #64ffda;
+    --text-primary: #f8fafc;
+    /* Almost white */
+    --text-secondary: #94a3b8;
+    /* Muted slate text */
+    --accent: #38bdf8;
+    /* Electric Sky Blue */
 
-    --white: #e6f1ff;
-    --green: #64ffda;
-    --navy: #0a192f;
+    --white: #ffffff;
+    --navy: #0f172a;
 
     /* Typography */
     --font-sans: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
 
     --font-mono: 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
 
-    --fz-xs: 12px;
-    --fz-sm: 14px;
-    --fz-md: 16px;
-    --fz-lg: 18px;
-    --fz-xl: 20px;
-    --fz-xxl: 22px;
+    /* Font Sizes */
+    --fz-xs: 13px;
+    --fz-sm: 15px;
+    --fz-md: 17px;
+    --fz-lg: 19px;
+    --fz-xl: 22px;
+    --fz-xxl: 24px;
     --fz-heading: 32px;
 
     /* Spacing */
@@ -37,7 +43,9 @@
     --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 
     /* Shadows */
-    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
-    --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.2);
-    --nav-height: 100px;
+    --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+    --nav-height: 80px;
 }
