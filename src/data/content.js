@@ -11,7 +11,7 @@ export const content = {
         hero: {
             greeting: "안녕하세요, 저는",
             title: "하드웨어와 소프트웨어를 잇는",
-            subtitle: "임베디드 엔지니어 이윤호입니다.",
+            subtitle: "임베디드 엔지니어 송윤오입니다.",
             description: "MCU 펌웨어 개발부터 Python 기반 데이터 처리까지, 시스템 전체를 관통하는 개발을 지향합니다.",
             cta: "프로젝트 보기",
             badges: ["STM32", "Python", "Firmware", "HW Design"]
@@ -63,7 +63,7 @@ export const content = {
         hero: {
             greeting: "Hello, I am",
             title: "Bridging Hardware & Software",
-            subtitle: "Embedded Engineer, Uknow Lee.",
+            subtitle: "Embedded Engineer, Yun-oh Song.",
             description: "Focusing on full-system development from MCU firmware to Python-based data processing.",
             cta: "View Projects",
             badges: ["STM32", "Python", "Firmware", "HW Design"]

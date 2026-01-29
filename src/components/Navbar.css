@@ -13,7 +13,6 @@
 
 .navbar.scrolled {
     background-color: var(--bg-secondary);
-    /* Use var for theme support */
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--border-default);
 }
@@ -39,8 +38,10 @@
     gap: 8px;
 }
 
-.logo:hover {
-    color: var(--text-secondary);
+.nav-desktop-group {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
 .nav-links {
@@ -61,7 +62,6 @@
 
 .nav-links a:hover {
     color: var(--text-secondary);
-    text-decoration: none;
 }
 
 .resume-btn button {
@@ -77,41 +77,55 @@
 
 .resume-btn button:hover {
     background-color: var(--btn-primary-hover);
-    border-color: rgba(240, 246, 252, 0.1);
 }
 
-/* Toggle Buttons */
+/* Toggles */
+.nav-toggles {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: 10px;
+    background-color: var(--bg-tertiary);
+    /* Subtle badge bg */
+    padding: 2px 8px;
+    border-radius: 20px;
+    border: 1px solid var(--border-muted);
+}
+
 .nav-divider {
-    color: var(--border-default);
-    margin: 0 5px;
-    font-size: 12px;
+    color: var(--border-muted);
+    margin: 0 2px;
+    font-size: 10px;
 }
 
 .icon-btn {
     background: none;
     border: none;
-    color: var(--text-primary);
-    font-size: var(--fz-md);
-    padding: 5px;
+    color: var(--text-secondary);
+    font-size: 13px;
+    padding: 4px;
     cursor: pointer;
-    font-family: var(--font-sans);
+    font-family: var(--font-mono);
     font-weight: 600;
+    display: flex;
+    align-items: center;
 }
 
 .icon-btn:hover {
     color: var(--accent);
-    background-color: transparent;
 }
 
-
+/* Mobile Menu Icon */
 .menu-icon {
     display: none;
+    /* Hidden on desktop */
     flex-direction: column;
     justify-content: space-between;
     width: 24px;
-    height: 20px;
+    height: 18px;
     cursor: pointer;
     z-index: 101;
+    margin-left: 15px;
 }
 
 .menu-icon span {
@@ -136,12 +150,9 @@
 }
 
 @media (max-width: 900px) {
-    .nav-container {
-        padding: 0 16px;
-    }
-
     .menu-icon {
         display: flex;
+        /* Show on mobile */
     }
 
     .nav-links {
@@ -151,16 +162,18 @@
         left: 0;
         width: 100%;
         height: auto;
-        background-color: var(--bg-tertiary);
-        /* Card bg for menu */
+        background-color: var(--bg-secondary);
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
         padding: 20px;
         border-bottom: 1px solid var(--border-default);
-        transform: translateY(-150%);
+        transform: translateY(-200%);
+        /* Start hidden above */
         transition: var(--transition);
         box-shadow: var(--shadow-md);
+        z-index: 99;
+        /* Below toggles */
     }
 
     .nav-links.active {
@@ -172,34 +185,14 @@
         margin: 10px 0;
         border-bottom: 1px solid var(--border-muted);
         padding-bottom: 10px;
+    }
+
+    .nav-links li:last-child {
+        border: none;
+    }
+
+    /* Toggles stay visible on mobile header */
+    .nav-toggles {
         display: flex;
-        align-items: center;
-    }
-
-    .nav-links li:last-child {
-        border: none;
-    }
-
-    .nav-divider {
-        display: none;
-        /* Hide divider on mobile */
-    }
-
-    .nav-toggle-item {
-        border-bottom: none !important;
-        margin: 0 !important;
-        padding: 5px 0 !important;
-        width: auto !important;
-        display: inline-flex !important;
-        margin-right: 15px !important;
-    }
-
-    /* Container for toggles to sit side-by-side */
-    .nav-links li:last-child {
-        border: none;
-        flex-direction: row;
-        /* Ensure toggles are horizontal */
-        justify-content: flex-start;
-        gap: 15px;
     }
 }

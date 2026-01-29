@@ -10,7 +10,7 @@ const Navbar = () => {
     const { language, toggleLanguage } = useLanguage();
     const { isDark, toggleTheme } = useTheme();
 
-    const t = content[language].navbar; // Text for current language
+    const t = content[language].navbar;
 
     useEffect(() => {
         const handleScroll = () => {
@@ -27,44 +27,40 @@ const Navbar = () => {
         <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
             <div className="nav-container">
                 <a href="/" className="logo" onClick={closeMenu}>
-                    {/* Simple text logo or SVG */}
-                    Uk.
+                    YunOh.
                 </a>
 
-                <div className="nav-controls-mobile">
-                    {/* Mobile Toggles could go here or inside menu */}
-                </div>
+                {/* Desktop Links */}
+                <div className="nav-desktop-group">
+                    <ul className={`nav-links ${isOpen ? 'active' : ''}`}>
+                        <li><a href="#about" onClick={closeMenu}>{t.about}</a></li>
+                        <li><a href="#projects" onClick={closeMenu}>{t.projects}</a></li>
+                        <li><a href="#skills" onClick={closeMenu}>{t.skills}</a></li>
+                        <li><a href="#contact" onClick={closeMenu}>{t.contact}</a></li>
+                        <li>
+                            <a href="/resume.pdf" className="resume-btn" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>
+                                <button>{t.resume}</button>
+                            </a>
+                        </li>
+                    </ul>
 
-                <div className={`menu-icon ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-
-                <ul className={`nav-links ${isOpen ? 'active' : ''}`}>
-                    <li><a href="#about" onClick={closeMenu}>{t.about}</a></li>
-                    <li><a href="#projects" onClick={closeMenu}>{t.projects}</a></li>
-                    <li><a href="#skills" onClick={closeMenu}>{t.skills}</a></li>
-                    <li><a href="#contact" onClick={closeMenu}>{t.contact}</a></li>
-                    <li>
-                        <a href="/resume.pdf" className="resume-btn" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>
-                            <button>{t.resume}</button>
-                        </a>
-                    </li>
-
-                    <li className="nav-divider">|</li>
-
-                    <li className="nav-toggle-item">
+                    {/* Toggles - Always visible on Right Top */}
+                    <div className="nav-toggles">
                         <button className="icon-btn" onClick={toggleLanguage} aria-label="Toggle Language">
                             {language === 'ko' ? 'EN' : 'KR'}
                         </button>
-                    </li>
-                    <li className="nav-toggle-item">
+                        <div className="nav-divider">|</div>
                         <button className="icon-btn" onClick={toggleTheme} aria-label="Toggle Theme">
                             {isDark ? '☀️' : '🌙'}
                         </button>
-                    </li>
-                </ul>
+                    </div>
+
+                    <div className={`menu-icon ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
             </div>
         </nav>
     );

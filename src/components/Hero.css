@@ -39,13 +39,13 @@
 }
 
 .hero-title.big-ueber {
-    font-size: clamp(32px, 6vw, 80px);
-    /* Adjust min size for mobile */
+    font-size: clamp(28px, 5vw, 60px);
+    /* Reduced scale to fit single line */
 }
 
 .hero-subtitle.big-ueber {
-    font-size: clamp(24px, 4.5vw, 60px);
-    /* Adjust min size for mobile */
+    font-size: clamp(20px, 3.5vw, 40px);
+    /* Reduced scale */
 }
 
 .hero-description {

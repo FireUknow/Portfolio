@@ -14,7 +14,7 @@ const Contact = () => {
             <p className="contact-description">
                 {t.description}
             </p>
-            <a href="mailto:example@email.com" className="email-link">{t.btn}</a>
+            {/* <a href="mailto:example@email.com" className="email-link">{t.btn}</a> */}
         </section>
     );
 };
