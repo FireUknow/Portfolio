@@ -30,6 +30,9 @@ body {
   overflow-x: hidden;
   background-color: var(--bg-primary);
   color: var(--text-primary);
+  /* Global Korean word break */
+  word-break: keep-all;
+  overflow-wrap: break-word;
 }
 
 a {

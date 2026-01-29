@@ -38,13 +38,27 @@
     line-height: 1.1;
 }
 
+.hero-title.big-ueber {
+    font-size: clamp(32px, 6vw, 80px);
+    /* Adjust min size for mobile */
+}
+
+.hero-subtitle.big-ueber {
+    font-size: clamp(24px, 4.5vw, 60px);
+    /* Adjust min size for mobile */
+}
+
 .hero-description {
     margin: 20px 0 0;
     max-width: 540px;
-    font-size: var(--fz-lg);
+    font-size: clamp(16px, 2vw, 20px);
+    /* Responsive font size */
     line-height: 1.6;
     color: var(--text-secondary);
     word-break: keep-all;
+    /* Prevent splitting words */
+    overflow-wrap: break-word;
+    /* Prevent overflow */
 }
 
 .hero-badges {

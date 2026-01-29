@@ -188,9 +188,18 @@
     .nav-toggle-item {
         border-bottom: none !important;
         margin: 0 !important;
-        padding: 0 !important;
+        padding: 5px 0 !important;
         width: auto !important;
         display: inline-flex !important;
         margin-right: 15px !important;
+    }
+
+    /* Container for toggles to sit side-by-side */
+    .nav-links li:last-child {
+        border: none;
+        flex-direction: row;
+        /* Ensure toggles are horizontal */
+        justify-content: flex-start;
+        gap: 15px;
     }
 }
