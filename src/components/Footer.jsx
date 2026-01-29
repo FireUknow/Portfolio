@@ -5,12 +5,13 @@ const Footer = () => {
     return (
         <footer className="footer">
             <div className="social-links">
-                {/* Social Icons would typically replace text here */}
                 <a href="https://github.com/FireUknow" target="_blank" rel="noopener noreferrer">GitHub</a>
-                {/* <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a> */}
+                {/* Blog / LinkedIn placeholders */}
+                {/* <a href="#" target="_blank" rel="noopener noreferrer">Blog</a> */}
+                {/* <a href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a> */}
             </div>
             <div className="copyright">
-                <p>Designed & Built by Uknow</p>
+                <p>Designed & Built by Uknow Lee</p>
             </div>
         </footer>
     );

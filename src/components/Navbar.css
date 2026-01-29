@@ -4,18 +4,16 @@
     width: 100%;
     height: var(--nav-height);
     background-color: transparent;
-    /* Transparent at top */
     z-index: 100;
     transition: var(--transition);
     border-bottom: 1px solid transparent;
-    /* No border at top */
     display: flex;
     align-items: center;
 }
 
 .navbar.scrolled {
-    background-color: rgba(13, 17, 23, 0.9);
-    /* Match bg-primary with opacity */
+    background-color: var(--bg-secondary);
+    /* Use var for theme support */
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--border-default);
 }
@@ -26,16 +24,13 @@
     align-items: center;
     width: 100%;
     max-width: 1000px;
-    /* Match Hero width */
     margin: 0 auto;
     padding: 0 20px;
-    /* Match Hero padding */
 }
 
 .logo {
     color: var(--text-primary);
     font-family: var(--font-sans);
-    /* System font for GitHub logo feel */
     font-size: var(--fz-lg);
     font-weight: 600;
     text-decoration: none;
@@ -46,7 +41,6 @@
 
 .logo:hover {
     color: var(--text-secondary);
-    /* GitHub hover style */
 }
 
 .nav-links {
@@ -67,18 +61,13 @@
 
 .nav-links a:hover {
     color: var(--text-secondary);
+    text-decoration: none;
 }
 
-.nav-number {
-    display: none;
-    /* Hide numbers for GitHub clean look */
-}
-
-/* Resume Button Style - Green Primary Button */
 .resume-btn button {
     background-color: var(--btn-primary);
     border: 1px solid rgba(240, 246, 252, 0.1);
-    color: var(--white);
+    color: #ffffff;
     padding: 5px 16px;
     border-radius: 6px;
     font-size: var(--fz-sm);
@@ -90,6 +79,30 @@
     background-color: var(--btn-primary-hover);
     border-color: rgba(240, 246, 252, 0.1);
 }
+
+/* Toggle Buttons */
+.nav-divider {
+    color: var(--border-default);
+    margin: 0 5px;
+    font-size: 12px;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    font-size: var(--fz-md);
+    padding: 5px;
+    cursor: pointer;
+    font-family: var(--font-sans);
+    font-weight: 600;
+}
+
+.icon-btn:hover {
+    color: var(--accent);
+    background-color: transparent;
+}
+
 
 .menu-icon {
     display: none;
@@ -110,7 +123,6 @@
     transition: all 0.3s linear;
 }
 
-/* Hamburger Animation */
 .menu-icon.open span:nth-child(1) {
     transform: rotate(45deg) translate(5px, 6px);
 }
@@ -135,12 +147,12 @@
     .nav-links {
         position: fixed;
         top: var(--nav-height);
-        /* Below header */
         right: 0;
         left: 0;
         width: 100%;
         height: auto;
         background-color: var(--bg-tertiary);
+        /* Card bg for menu */
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
@@ -148,7 +160,7 @@
         border-bottom: 1px solid var(--border-default);
         transform: translateY(-150%);
         transition: var(--transition);
-        box-shadow: none;
+        box-shadow: var(--shadow-md);
     }
 
     .nav-links.active {
@@ -160,9 +172,25 @@
         margin: 10px 0;
         border-bottom: 1px solid var(--border-muted);
         padding-bottom: 10px;
+        display: flex;
+        align-items: center;
     }
 
     .nav-links li:last-child {
         border: none;
+    }
+
+    .nav-divider {
+        display: none;
+        /* Hide divider on mobile */
+    }
+
+    .nav-toggle-item {
+        border-bottom: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        width: auto !important;
+        display: inline-flex !important;
+        margin-right: 15px !important;
     }
 }

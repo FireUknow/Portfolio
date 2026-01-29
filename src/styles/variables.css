@@ -59,3 +59,30 @@
     --nav-height: 64px;
     /* GitHub Header height */
 }
+
+.light-theme {
+    /* GitHub Light Theme */
+    --bg-primary: #ffffff;
+    --bg-secondary: #f6f8fa;
+    /* Header/Footer */
+    --bg-tertiary: #ffffff;
+    /* Cards */
+
+    --text-primary: #1f2328;
+    /* FG Default */
+    --text-secondary: #656d76;
+    /* FG Muted */
+    --accent: #0969da;
+    /* Link Color */
+    --accent-hover: #1f2328;
+
+    --border-default: #d0d7de;
+    --border-muted: #d8dee4;
+
+    --btn-primary: #1f883d;
+    --btn-primary-hover: #1a7f37;
+
+    --white: #ffffff;
+    /* Typically stays white or inverts carefully, used for text on dark bg */
+    --navy: #ffffff;
+}

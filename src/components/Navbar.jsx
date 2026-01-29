@@ -1,9 +1,16 @@
 import React, { useState, useEffect } from 'react';
+import { useLanguage, useTheme } from '../contexts/GlobalContext';
+import { content } from '../data/content';
 import './Navbar.css';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
+
+    const { language, toggleLanguage } = useLanguage();
+    const { isDark, toggleTheme } = useTheme();
+
+    const t = content[language].navbar; // Text for current language
 
     useEffect(() => {
         const handleScroll = () => {
@@ -19,7 +26,14 @@ const Navbar = () => {
     return (
         <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
             <div className="nav-container">
-                <a href="/" className="logo" onClick={closeMenu}>U.</a>
+                <a href="/" className="logo" onClick={closeMenu}>
+                    {/* Simple text logo or SVG */}
+                    Uk.
+                </a>
+
+                <div className="nav-controls-mobile">
+                    {/* Mobile Toggles could go here or inside menu */}
+                </div>
 
                 <div className={`menu-icon ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
                     <span></span>
@@ -28,25 +42,27 @@ const Navbar = () => {
                 </div>
 
                 <ul className={`nav-links ${isOpen ? 'active' : ''}`}>
-                    <li>
-                        <a href="#about" onClick={closeMenu}>
-                            <span className="nav-number">01.</span> 소개
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#projects" onClick={closeMenu}>
-                            <span className="nav-number">02.</span> 프로젝트
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#contact" onClick={closeMenu}>
-                            <span className="nav-number">03.</span> 연락하기
-                        </a>
-                    </li>
+                    <li><a href="#about" onClick={closeMenu}>{t.about}</a></li>
+                    <li><a href="#projects" onClick={closeMenu}>{t.projects}</a></li>
+                    <li><a href="#skills" onClick={closeMenu}>{t.skills}</a></li>
+                    <li><a href="#contact" onClick={closeMenu}>{t.contact}</a></li>
                     <li>
                         <a href="/resume.pdf" className="resume-btn" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>
-                            <button>이력서</button>
+                            <button>{t.resume}</button>
                         </a>
+                    </li>
+
+                    <li className="nav-divider">|</li>
+
+                    <li className="nav-toggle-item">
+                        <button className="icon-btn" onClick={toggleLanguage} aria-label="Toggle Language">
+                            {language === 'ko' ? 'EN' : 'KR'}
+                        </button>
+                    </li>
+                    <li className="nav-toggle-item">
+                        <button className="icon-btn" onClick={toggleTheme} aria-label="Toggle Theme">
+                            {isDark ? '☀️' : '🌙'}
+                        </button>
                     </li>
                 </ul>
             </div>
