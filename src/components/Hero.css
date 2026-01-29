@@ -18,13 +18,14 @@
 .hero-shoutout {
     margin: 0 0 20px 4px;
     color: var(--accent);
-    font-family: var(--font-mono);
+    font-family: var(--font-heading);
     font-size: clamp(var(--fz-sm), 5vw, var(--fz-md));
-    font-weight: 400;
+    font-weight: 500;
 }
 
 .big-ueber {
     margin: 0;
+    font-family: var(--font-heading);
     font-size: clamp(40px, 8vw, 80px);
     font-weight: 700;
     color: var(--text-primary);
@@ -47,8 +48,9 @@
 
 .hero-typing {
     color: var(--accent);
-    font-family: var(--font-mono);
+    font-family: var(--font-heading);
     font-size: var(--fz-xl);
+    font-weight: 500;
 }
 
 .cursor {
