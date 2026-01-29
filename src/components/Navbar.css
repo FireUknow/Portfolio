@@ -1,0 +1,61 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: var(--nav-height);
+    background-color: rgba(10, 25, 47, 0.85);
+    backdrop-filter: blur(10px);
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    box-sizing: border-box;
+    transition: var(--transition);
+    box-shadow: var(--shadow-sm);
+}
+
+.logo {
+    color: var(--accent);
+    font-family: var(--font-mono);
+    font-size: var(--fz-xl);
+    font-weight: 600;
+    text-decoration: none;
+    border: 1px solid var(--accent);
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-link {
+    color: var(--text-primary);
+    font-family: var(--font-mono);
+    font-size: var(--fz-xs);
+    transition: var(--transition);
+}
+
+.nav-link:hover {
+    color: var(--accent);
+}
+
+.nav-number {
+    color: var(--accent);
+    margin-right: 5px;
+}
+
+/* Mobile basic responsive (can be improved later) */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .nav-links {
+        display: none;
+        /* Hide for now on mobile, implement hamburger later */
+    }
+}

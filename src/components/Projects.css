@@ -1,0 +1,83 @@
+.projects-section {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+
+.projects-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.project-card {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    /* Simplified for now, usually image + text overlap */
+    background-color: var(--bg-secondary);
+    padding: 2rem;
+    border-radius: 4px;
+}
+
+.project-overline {
+    margin: 10px 0;
+    color: var(--accent);
+    font-family: var(--font-mono);
+    font-size: var(--fz-xs);
+}
+
+.project-title {
+    margin: 0 0 20px;
+    color: var(--text-primary);
+    font-size: clamp(24px, 5vw, 28px);
+}
+
+.project-title a {
+    color: var(--text-primary);
+}
+
+.project-title a:hover {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.project-description {
+    background-color: var(--bg-tertiary);
+    padding: 25px;
+    border-radius: 4px;
+    color: var(--text-secondary);
+    font-size: var(--fz-md);
+}
+
+.project-tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 20px;
+    padding: 0;
+    margin: 25px 0 10px;
+    list-style: none;
+}
+
+.project-tech-list li {
+    font-family: var(--font-mono);
+    font-size: var(--fz-xs);
+    color: var(--text-secondary);
+}
+
+.project-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.project-links a {
+    color: var(--text-primary);
+    font-family: var(--font-mono);
+    font-size: var(--fz-md);
+}
+
+.project-links a:hover {
+    color: var(--accent);
+}
