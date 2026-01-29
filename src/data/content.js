@@ -63,7 +63,7 @@ export const content = {
         hero: {
             greeting: "Hello, I am",
             title: "Bridging Hardware & Software",
-            subtitle: "Embedded Engineer, Yun-oh Song.",
+            subtitle: "Embedded Engineer, Uknow Song.",
             description: "Focusing on full-system development from MCU firmware to Python-based data processing.",
             cta: "View Projects",
             badges: ["STM32", "Python", "Firmware", "HW Design"]
