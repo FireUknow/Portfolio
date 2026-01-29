@@ -1,35 +1,42 @@
 :root {
-    /* Colors - Premium Slate Theme */
-    --bg-primary: #0f172a;
-    /* Very dark slate */
-    --bg-secondary: #1e293b;
-    /* Build items background */
-    --bg-tertiary: #334155;
-    /* Hover/Card accents */
+    /* Colors - GitHub Dark Theme */
+    --bg-primary: #0d1117;
+    /* Canvas Default */
+    --bg-secondary: #010409;
+    /* Canvas Subtler (Navbar/Footer) */
+    --bg-tertiary: #161b22;
+    /* Canvas Subtle (Cards) */
 
-    --text-primary: #f8fafc;
-    /* Almost white */
-    --text-secondary: #94a3b8;
-    /* Muted slate text */
-    --accent: #38bdf8;
-    /* Electric Sky Blue */
+    --text-primary: #e6edf3;
+    /* FG Default */
+    --text-secondary: #7d8590;
+    /* FG Muted */
+    --accent: #2f81f7;
+    /* Accent FG (Links) */
+    --accent-hover: #58a6ff;
+
+    --border-default: #30363d;
+    --border-muted: #21262d;
+
+    --btn-primary: #238636;
+    /* Success Emphasis */
+    --btn-primary-hover: #2ea043;
 
     --white: #ffffff;
-    --navy: #0f172a;
+    --navy: #0d1117;
 
-    /* Typography */
-    --font-sans: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
-
-    --font-mono: 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+    /* Typography - System Stack */
+    --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    --font-mono: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
 
     /* Font Sizes */
-    --fz-xs: 13px;
-    --fz-sm: 15px;
-    --fz-md: 17px;
-    --fz-lg: 19px;
-    --fz-xl: 22px;
-    --fz-xxl: 24px;
-    --fz-heading: 32px;
+    --fz-xs: 12px;
+    --fz-sm: 14px;
+    --fz-md: 16px;
+    --fz-lg: 20px;
+    --fz-xl: 24px;
+    --fz-xxl: 32px;
+    --fz-heading: 48px;
 
     /* Spacing */
     --spacing-xs: 4px;
@@ -37,15 +44,17 @@
     --spacing-md: 16px;
     --spacing-lg: 24px;
     --spacing-xl: 32px;
-    --spacing-xxl: 64px;
+    --spacing-xxl: 48px;
 
     /* Transitions */
-    --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    --transition: 0.2s cubic-bezier(0.3, 0, 0.5, 1);
 
-    /* Shadows */
-    --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    /* Shadows - Minimal/None for GitHub style */
+    --shadow-sm: none;
+    --shadow-md: 0 3px 6px rgba(140, 149, 159, 0.15);
+    /* Very subtle if needed */
+    --shadow-xl: 0 8px 24px rgba(140, 149, 159, 0.2);
 
-    --nav-height: 80px;
+    --nav-height: 64px;
+    /* GitHub Header height */
 }

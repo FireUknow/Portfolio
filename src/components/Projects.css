@@ -1,36 +1,35 @@
 .projects-section {
     max-width: 1000px;
     margin: 0 auto;
-    padding: 100px 0;
+    padding: 80px 0;
 }
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    /* Wider cards */
+    gap: 16px;
+    /* GitHub gap */
 }
 
 .project-card {
     position: relative;
-    background-color: var(--bg-secondary);
-    /* Updated variable usage check */
-    padding: 2rem 1.75rem;
-    border-radius: 8px;
-    /* Slightly more rounded */
+    background-color: var(--bg-primary);
+    /* Transparent/Default on GitHub */
+    padding: 16px;
+    border-radius: 6px;
+    border: 1px solid var(--border-default);
     transition: var(--transition);
     cursor: default;
     height: 100%;
     display: flex;
     flex-direction: column;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    /* Slight border for definition */
 }
 
 .project-card:hover {
-    transform: translateY(-7px);
-    box-shadow: var(--shadow-md);
-    border-top: 1px solid var(--accent);
-    /* Top border accent on hover */
+    transform: none;
+    /* No movement */
+    border-color: var(--text-secondary);
 }
 
 .project-content {
@@ -40,22 +39,31 @@
 }
 
 .project-overline {
-    margin: 0 0 10px;
-    color: var(--accent);
-    font-family: var(--font-mono);
-    font-size: var(--fz-xs);
+    display: none;
+    /* Clean up */
 }
 
 .project-title {
-    margin: 0 0 10px;
-    color: var(--text-primary);
-    font-size: var(--fz-xxl);
-    font-weight: 700;
+    margin: 0 0 8px;
+    font-size: var(--fz-sm);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Repo Icon placeholder using CSS */
+.project-title::before {
+    content: "📓";
+    /* Simple book emoji as placeholder for repo icon */
+    font-size: 14px;
+    filter: grayscale(1);
 }
 
 .project-title a {
     position: static;
-    color: var(--text-primary);
+    color: var(--accent);
+    text-decoration: none;
 }
 
 .project-title a::before {
@@ -70,51 +78,70 @@
 }
 
 .project-title a:hover {
-    color: var(--accent);
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 .project-description {
     color: var(--text-secondary);
-    font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 20px;
+    font-size: 12px;
+    line-height: 1.5;
+    margin-bottom: 16px;
     flex-grow: 1;
 }
 
 .project-tech-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 10px;
     padding: 0;
-    margin: 0 0 25px 0;
+    margin: 0 0 16px 0;
     list-style: none;
+    font-size: 12px;
 }
 
 .project-tech-list li {
-    font-family: var(--font-mono);
-    font-size: var(--fz-xs);
     color: var(--text-secondary);
-    background-color: rgba(56, 189, 248, 0.1);
-    /* Subtle badge background using accent */
-    padding: 4px 8px;
-    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
 }
+
+/* Dot for language color */
+.project-tech-list li::before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #f1e05a;
+    /* JS Yellow default */
+}
+
+.project-tech-list li:nth-child(2n)::before {
+    background-color: #563d7c;
+}
+
+/* CSS Purple default */
+.project-tech-list li:nth-child(3n)::before {
+    background-color: #2b7489;
+}
+
+/* TS Blue default */
 
 .project-links {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 16px;
+    font-size: 12px;
 }
 
 .project-links a {
-    color: var(--text-primary);
-    font-family: var(--font-mono);
-    font-size: var(--fz-sm);
+    color: var(--text-secondary);
+    font-family: var(--font-sans);
     z-index: 1;
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 4px;
 }
 
 .project-links a:hover {
